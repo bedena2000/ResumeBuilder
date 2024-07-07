@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export const Experience = () => {
   return (
-    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between">
+    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8">
       <div className="flex items-center justify-between">
         <h2 className="font-nunito text-xl font-bold text-[#191919]">
           Experience
         </h2>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex gap-4 flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Employer
@@ -34,7 +34,7 @@ export const Experience = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex mt-4 flex-wrap gap-4 items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Address
@@ -53,7 +53,7 @@ export const Experience = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-end">
+      <div className="flex m-4 items-center justify-end">
         <div className="flex items-center gap-2">
           <input type="checkbox" />
           <p className="text-[#191919] text-lg font-nunito font-bold">
@@ -62,7 +62,7 @@ export const Experience = () => {
         </div>
       </div>
 
-      <div className="flex gap-9 justify-between">
+      <div className="flex flex-wrap gap-9 justify-between">
         <div>
           <p className="text-[#191919] text-lg font-nunito font-bold">Start</p>
           <input
@@ -86,11 +86,11 @@ export const Experience = () => {
       </div>
 
       <div className="flex justify-between items-center">
-        <Link to="/create">
+        <Link to="/create/education">
           <FaArrowLeft size={24} className="cursor-pointer" />
         </Link>
         <Link
-          to="/education"
+          to="/create/contact"
           className="bg-[#8910F1] rounded-lg outline-none py-4 px-14 text-white font-bold font-nunito text-lg"
         >
           Next Session

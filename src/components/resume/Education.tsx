@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export const Education = () => {
   return (
-    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between">
+    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8 flex-wrap">
       <div className="flex items-center justify-between">
         <h2 className="font-nunito text-xl font-bold text-[#191919]">
           Education
         </h2>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Institution Name
@@ -22,7 +22,7 @@ export const Education = () => {
             placeholder="Name of school"
           />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">Course</p>
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
@@ -32,7 +32,7 @@ export const Education = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Country
@@ -43,7 +43,7 @@ export const Education = () => {
             placeholder="Country name"
           />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">State</p>
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
@@ -52,7 +52,7 @@ export const Education = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         <p className="text-[#191919] text-lg font-nunito font-bold">
           Time Period
         </p>
@@ -64,7 +64,7 @@ export const Education = () => {
         </div>
       </div>
 
-      <div className="flex gap-9 justify-between">
+      <div className="flex flex-wrap gap-9 justify-between">
         <div>
           <p className="text-[#191919] text-lg font-nunito font-bold">Start</p>
           <input
@@ -83,12 +83,12 @@ export const Education = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center">
         <Link to="/create">
           <FaArrowLeft size={24} className="cursor-pointer" />
         </Link>
         <Link
-          to="/education"
+          to="/create/experience"
           className="bg-[#8910F1] rounded-lg outline-none py-4 px-14 text-white font-bold font-nunito text-lg"
         >
           Next Session

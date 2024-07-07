@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 export const Contact = () => {
   return (
-    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between">
+    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8">
       <div className="flex items-center justify-between">
         <h2 className="font-nunito text-xl font-bold text-[#191919]">
           Contact Information
         </h2>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex gap-4 flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Email address
@@ -33,7 +33,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex gap-4  mt-4 flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Linkedin Profile link
@@ -54,7 +54,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex mt-4 gap-4 flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Instagram Profile link
@@ -75,7 +75,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap gap-4 items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Github profile link
@@ -87,12 +87,12 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center">
-        <Link to="/create">
+      <div className="flex flex-wrap  justify-between items-center">
+        <Link to="/create/experience">
           <FaArrowLeft size={24} className="cursor-pointer" />
         </Link>
         <Link
-          to="/education"
+          to="/create/award"
           className="bg-[#8910F1] rounded-lg outline-none py-4 px-14 text-white font-bold font-nunito text-lg"
         >
           Next Session

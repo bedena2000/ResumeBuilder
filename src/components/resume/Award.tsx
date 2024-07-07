@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Award = () => {
   return (
-    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between">
+    <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8">
       <div className="flex items-center justify-between">
         <h2 className="font-nunito text-xl font-bold text-[#191919]">
           Award/Certification
@@ -24,7 +24,7 @@ export const Award = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between">
         <div className="flex flex-col gap-3">
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Award Title (optional)
@@ -58,14 +58,14 @@ export const Award = () => {
       </div>
 
       <div className="flex justify-between items-center">
-        <Link to="/create">
+        <Link to="/create/contact">
           <FaArrowLeft size={24} className="cursor-pointer" />
         </Link>
         <Link
-          to="/education"
+          to="/create/finish"
           className="bg-[#8910F1] rounded-lg outline-none py-4 px-14 text-white font-bold font-nunito text-lg"
         >
-          Next Session
+          Finish
         </Link>
       </div>
     </div>
