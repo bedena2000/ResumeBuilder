@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+interface educationData {
+  institution: string;
+  course: string;
+  country: string;
+  state: string;
+  currentlyStudy: boolean;
+  timePeriod: {
+    start: string;
+    finish: string;
+  };
+}
+
 export const Education = () => {
+  const [data, setData] = useState<educationData>({
+    institution: "",
+    course: "",
+    country: "",
+    currentlyStudy: false,
+    state: "",
+    timePeriod: {
+      start: "",
+      finish: "",
+    },
+  });
+
   return (
     <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8 flex-wrap">
       <div className="flex items-center justify-between">

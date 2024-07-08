@@ -7,7 +7,7 @@ export const Create = () => {
     <div className="min-h-screen ">
       <div className="relative">
         <BuilderHeader />
-        <div className=" p-4 flex flex-col xl:flex-row gap-14 justify-between container xl:-translate-y-6">
+        <div className="py-4 xl:px-0 px-4   flex flex-col xl:flex-row gap-14 justify-between container xl:-translate-y-12">
           <BuilderMenu />
           <Outlet />
         </div>
