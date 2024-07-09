@@ -1,8 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+interface contactInformation {
+  email: string;
+  phone: string;
+  linkedIn: string;
+  twitter: string;
+  instagram: string;
+  portfolio: string;
+  github: string;
+}
+
 export const Contact = () => {
+
+  const [data, setData] = useState<contactInformation>({
+      email: '',
+      phone: '',
+      linkedIn: '',
+      twitter: '',
+      instagram: '',
+      portfolio: '',
+      github: ''
+  });
+
+  console.log(data);
+
   return (
     <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8">
       <div className="flex items-center justify-between">
@@ -20,6 +43,15 @@ export const Contact = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="email"
             placeholder="Email adress"
+            value={data.email}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  email: event.target.value
+                }
+              })
+            }}
           />
         </div>
         <div className="flex flex-col gap-3">
@@ -29,6 +61,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="number"
+            value={data.phone}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  phone: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>
@@ -41,6 +82,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.linkedIn}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  linkedIn: event.target.value
+                }
+              })
+            }}
           />
         </div>
         <div className="flex flex-col gap-3">
@@ -50,6 +100,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.twitter}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  twitter: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>
@@ -62,6 +121,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.instagram}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  instagram: event.target.value
+                }
+              })
+            }}
           />
         </div>
         <div className="flex flex-col gap-3">
@@ -71,6 +139,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.portfolio}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  portfolio: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>
@@ -83,6 +160,15 @@ export const Contact = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.github}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  github: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>

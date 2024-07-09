@@ -27,6 +27,8 @@ export const Education = () => {
     },
   });
 
+  console.log(data);
+
   return (
     <div className="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] w-full h-auto bg-white py-10 px-12 rounded-2xl flex flex-col justify-between gap-8 flex-wrap">
       <div className="flex items-center justify-between">
@@ -44,6 +46,15 @@ export const Education = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
             placeholder="Name of school"
+            value={data.institution}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  institution: event.target.value
+                }
+              })
+            }}
           />
         </div>
         <div className="flex flex-wrap flex-col gap-3">
@@ -52,6 +63,15 @@ export const Education = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
             placeholder="Course studied"
+            value={data.course}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  course: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>
@@ -65,6 +85,15 @@ export const Education = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
             placeholder="Country name"
+            value={data.country}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  country: event.target.value
+                }
+              })
+            }}
           />
         </div>
         <div className="flex flex-wrap flex-col gap-3">
@@ -72,6 +101,15 @@ export const Education = () => {
           <input
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="text"
+            value={data.state}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  state: event.target.value
+                }
+              })
+            }}
           />
         </div>
       </div>
@@ -81,7 +119,17 @@ export const Education = () => {
           Time Period
         </p>
         <div className="flex items-center gap-2">
-          <input type="checkbox" />
+          <input type="checkbox" 
+            checked={data.currentlyStudy}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  currentlyStudy: event.target.checked
+                }
+              })
+            }}
+          />
           <p className="text-[#191919] text-lg font-nunito font-bold">
             Currently study here
           </p>
@@ -95,6 +143,18 @@ export const Education = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="date"
             placeholder="MM/YY"
+            value={data.timePeriod.start}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  timePeriod: {
+                    start: event.target.value,
+                    finish: prevState.timePeriod.finish
+                  }
+                }
+              })
+            }}
           />
         </div>
         <div>
@@ -103,6 +163,18 @@ export const Education = () => {
             className="w-auto text-[#191919] font-bold text-xl font-nunito  bg-[#F0F0F0] p-3 rounded-lg outline-none border-[#B1B1B1] border"
             type="date"
             placeholder="MM/YY"
+            value={data.timePeriod.finish}
+            onChange={(event) => {
+              setData((prevState) => {
+                return {
+                  ...prevState,
+                  timePeriod: {
+                    start: prevState.timePeriod.start,
+                    finish: event.target.value
+                  }
+                }
+              })
+            }}
           />
         </div>
       </div>
